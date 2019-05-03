@@ -17,12 +17,21 @@ VideoClipImporter:
   importAudio: 1
   targetSettings:
     0:
-      enableTranscoding: 0
+      enableTranscoding: 1
+      codec: 0
+      resizeFormat: 7
+      aspectRatio: 0
+      customWidth: 4096
+      customHeight: 2048
+      bitrateMode: 2
+      spatialQuality: 2
+    1:
+      enableTranscoding: 1
       codec: 0
       resizeFormat: 0
       aspectRatio: 0
-      customWidth: 1920
-      customHeight: 1080
+      customWidth: 4096
+      customHeight: 2048
       bitrateMode: 2
       spatialQuality: 2
   userData: 
