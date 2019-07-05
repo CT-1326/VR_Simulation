@@ -316,13 +316,11 @@ public class OVRPlayerController : MonoBehaviour
 			if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
 			{
 				moveForward = true;
-				//dpad_move = true;
 
 			}
 
 			if (OVRInput.Get(OVRInput.Button.PrimaryTouchpad))
 			{
-				//moveBack = true;
 				dpad_move = true;
 			}
 
