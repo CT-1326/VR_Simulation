@@ -1,36 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tower : MonoBehaviour {
+public class Tower : MonoBehaviour
+{
 
-	public Transform shootElement;
-	public Transform LookAtObj;
-	public int dmg = 10;
-	public GameObject bullet;
-	public Transform target;
-	public float shootDelay;
-	bool isShoot;
-	void Start () {
-	
-	}
-	
-	void Update () {
-	if(target)
-	{
-		LookAtObj.transform.LookAt(target);
-		if(!isShoot)
-	{
-		StartCoroutine(shoot());
-	}
-	}
-	}
+    public Transform shootElement;
+    public GameObject bullet;
 
-	IEnumerator shoot()
-	{
-		isShoot = true;
-		yield return new WaitForSeconds(shootDelay);
-		GameObject b = GameObject.Instantiate(bullet,shootElement.position,Quaternion.identity) as GameObject;
-		b.GetComponent<bulletTower>().target = target;
-		isShoot = false;
-	}
+    Vector3 offset = new Vector3(.15f, 0, -.15f);
+
+    float speed = .2f;
+    double fireTimer = 0.0;
+    double fireTimerLength = .25;
+
+    bool isShoot = false;
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+        if (isShoot)
+        {
+            fireTimer += Time.deltaTime;
+            if (fireTimer >= fireTimerLength)
+            {
+                fireTimer = 0.0;
+                isShoot = false;
+            }
+        }
+
+        if (OVRInput.Get(OVRInput.Button.PrimaryTouchpad) || Input.GetKey(KeyCode.R))
+        {
+            // if is not already firing, start firing
+            if (!isShoot)
+            {
+                // Get force value from slider
+                float force = GameObject.Find("Slider").GetComponent<UnityEngine.UI.Slider>().value;
+                Debug.Log("Fire! " + force);
+                isShoot = true;
+                // Instantiate new satellite
+                GameObject bulletClone = (GameObject)Instantiate(bullet, shootElement.position, transform.rotation);
+                // Set velocty on satellite
+                bulletClone.GetComponent<Rigidbody>().velocity = transform.forward * (speed * force);
+            }
+        }
+
+    }
 }
