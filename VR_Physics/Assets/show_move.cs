@@ -6,19 +6,17 @@ using TMPro;
 public class show_move : MonoBehaviour
 {
     public GameObject go;
-    TextMeshPro txt;
+    TextMeshProUGUI txt;
     
-
     // Start is called before the first frame update
     void Start()
     {
-        txt = GetComponent<TextMeshPro>().text;
+        txt = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //txt.text = "X : "+go.transform.localPosition.x +"Y : "+go.transform.localPosition.y;
-        txt.text="hi";
+        txt.text = "Z : " + go.transform.localPosition.z.ToString("N2");
     }
 }
