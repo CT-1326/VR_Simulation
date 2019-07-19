@@ -42,7 +42,7 @@ public class Tower : MonoBehaviour
                 Debug.Log("Fire! " + force);
                 isShoot = true;
                 // Instantiate new satellite
-                GameObject bulletClone = (GameObject)Instantiate(bullet, shootElement.position, transform.rotation);
+                GameObject bulletClone = (GameObject)Instantiate(bullet, shootElement.position,shootElement.rotation);
                 // Set velocty on satellite
                 bulletClone.GetComponent<Rigidbody>().velocity = transform.forward * (speed * force);
             }
