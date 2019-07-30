@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class Info : MonoBehaviour
 {
-    Text txt;
-    public GameObject go;
+    Text txt; // 실험 영상 관련 Text 변수
+    public GameObject View; // 실험 영상 관련 UI 오브젝트
 
     public void TextView()
      {
-        go.SetActive(true);
+        View.SetActive(true); // Info UI 버튼이 눌렸을 때 INFO UI를 ON
 
-        txt = GameObject.Find("Text").GetComponent<Text>();
+        txt = GameObject.Find("Text").GetComponent<Text>(); // UI에 첨부되있는 Text 옵션 찾아 받는다
 
-        if (Move.check == 1)
+        if (Move.check == 1) // 실험 1 경우
         {
             txt.text = "안녕하세요\n안녕들하십니까 안녕하십니까";
         }
@@ -30,6 +30,6 @@ public class Info : MonoBehaviour
 
     public void Exit()
     {
-        go.SetActive(false);
+        View.SetActive(false); // X 버튼이 눌렸을 땐 INFO UI를 OFF
     }
 }
