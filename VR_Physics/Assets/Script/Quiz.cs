@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Quiz : MonoBehaviour
 {
     Text txt; // 퀴즈 관련 Text
-    public int Level = 1; // O,X 퀴즈 단계
+    int Level = 1; // O,X 퀴즈 단계
     int sum = 0; //퀴즈 맞춘 수
 
     public void correct() // O 버튼을 눌렀을 때
@@ -34,7 +35,7 @@ public class Quiz : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txt = this.GetComponent<Text>(); // 이용하려는 Text 옵션을 받는다
+        txt = GameObject.Find("Text").GetComponent<Text>(); // Text 옵션을 찾아 이용하게 받는다
     }
 
     // Update is called once per frame
@@ -56,7 +57,11 @@ public class Quiz : MonoBehaviour
                 break;
             case 5:
                 txt.text = "테스트 텍스트5\n테스트 텍스트5 마무리";
-                SceneManager.LoadScene("newtons");
+                break;
+            default:
+                txt.text = "정답 수 : "+sum+"\n체험존으로 5초 뒤 이동합니다";
+                Thread.Sleep(5000);
+                SceneManager.LoadScene("Newtons");
                 break;
         }
     }
