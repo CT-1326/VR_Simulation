@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
     }
     public void Lgo()
     {
-        SceneManager.LoadScene("Newtons");
+        SceneManager.LoadScene("Quiz");
     }
     public void Rgo()
     {
