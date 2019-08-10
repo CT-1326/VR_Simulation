@@ -45,22 +45,28 @@ public class Quiz : MonoBehaviour
         {
             case 1:
                 txt.text = "테스트 텍스트1\n테스트 텍스트1 마무리";
+                Debug.Log("1");
                 break;
             case 2:
                 txt.text = "테스트 텍스트2\n테스트 텍스트2 마무리";
+                Debug.Log("2");
                 break;
             case 3:
                 txt.text = "테스트 텍스트3\n테스트 텍스트3 마무리";
+                Debug.Log("3");
                 break;
             case 4:
                 txt.text = "테스트 텍스트4\n테스트 텍스트4 마무리";
+                Debug.Log("4");
                 break;
             case 5:
                 txt.text = "테스트 텍스트5\n테스트 텍스트5 마무리";
+                Debug.Log("5");
                 break;
             default:
                 txt.text = "정답 수 : "+sum+"\n체험존으로 5초 뒤 이동합니다";
-                Thread.Sleep(5000);
+                Debug.Log("other");
+                //Thread.Sleep(5000);
                 SceneManager.LoadScene("Newtons");
                 break;
         }
