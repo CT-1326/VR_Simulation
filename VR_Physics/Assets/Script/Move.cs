@@ -5,32 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
-    public static int check; // 어떤 버튼이 눌렸는지 체크하기 위한 체크 변수
+    public static int check; // Button check
 
-    public void Mgo() // 메인 화면 버튼이 눌렸을 경우
+    public void Mgo() //go to main scene
     {
-        SceneManager.LoadScene("Main"); // 메인 화면으로 돌아간다
+        SceneManager.LoadScene("Main"); 
     }
-    public void Lgo()
+    public void Lgo() // go to quiz scene
     {
         SceneManager.LoadScene("Quiz");
     }
-    public void Rgo()
+    public void Rgo() // go to select scene
     {
-        SceneManager.LoadScene("Right");
+        SceneManager.LoadScene("Select");
     }
 
-    public void V1() // 실험 1 버튼이 눌렸을 경우
+    public void V1()  // go to frist movie
     {
-        check = 1; // 체크 변수에 1 값을 대입해 Video 씬에 쓰일 수 있게 해준다
+        check = 1; 
         SceneManager.LoadScene("Movie");
     }
-    public void V2()
+    public void V2() 
     {
         check = 2;
         SceneManager.LoadScene("Movie");
     }
-    public void V3()
+    public void V3() 
     {
         check = 3;
         SceneManager.LoadScene("Movie");

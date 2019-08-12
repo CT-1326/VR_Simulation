@@ -7,24 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class Quiz : MonoBehaviour
 {
-    Text txt; // 퀴즈 관련 Text
-    static int Level = 1; // O,X 퀴즈 단계...고정 값(static)으로 선언해야 값이 o,x 퀴즈 상황에 맞게 고정된다
-    static int sum = 0; //퀴즈 맞춘 수...level과 마찬가지로 고정 값 선언
-    float time = 5f; // 타이머 변수
+    Text txt;
+    static int Level = 1; // Quiz level
+    static int sum = 0; // Quiz score
+    float time = 5f; // Timer
 
-    public void correct() // O 버튼을 눌렀을 때
+    public void correct() 
     {
-        if (Level == 1 || Level == 3 || Level == 5) // O 버튼이 정답인 문제면
+        if (Level == 1 || Level == 3 || Level == 5) // if correct
         {
             sum++;
             Level++;
         }
-        else // 아닐경우에도 퀴즈 레벨은 증가
+        else // or not
             Level++;
 
         StartCoroutine(show_text());
     }
-    public void wrong() // X 버튼을 눌렀을 때
+    public void wrong()
     {
         if(Level == 2 || Level == 4)
         {
@@ -34,14 +34,14 @@ public class Quiz : MonoBehaviour
         else
             Level++;
 
-        StartCoroutine(show_text());
+        StartCoroutine(show_text()); // show text related quiz
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        txt = GameObject.Find("Text").GetComponent<Text>(); // Text 옵션을 찾아 이용하게 받는다
-        txt.text = "테스트 텍스트1\n테스트 텍스트1 마무리";
+        txt = GameObject.Find("Text").GetComponent<Text>();
+        txt.text = "text\ntext1\ntext done";
     }
 
     // Update is called once per frame
@@ -51,27 +51,22 @@ public class Quiz : MonoBehaviour
 
     IEnumerator show_text()
     {
-        switch (Level) // Level 값 마다 Text 내용이 달라진다
+        switch (Level) 
         {
             case 2:
-                txt.text = "테스트 텍스트2\n테스트 텍스트2 마무리";
-                Debug.Log("2");
+                txt.text = "text\ntext2\ntext done";
                 break;
             case 3:
-                txt.text = "테스트 텍스트3\n테스트 텍스트3 마무리";
-                Debug.Log("3");
+                txt.text = "text\ntext3\ntext done";
                 break;
             case 4:
-                txt.text = "테스트 텍스트4\n테스트 텍스트4 마무리";
-                Debug.Log("4");
+                txt.text = "text\ntext4\ntext done";
                 break;
             case 5:
-                txt.text = "테스트 텍스트5\n테스트 텍스트5 마무리";
-                Debug.Log("5");
+                txt.text = "text\ntext5\ntext done";
                 break;
             default:
-                txt.text = "정답 수 : " + sum + "\n체험존으로 5초 뒤 이동합니다";
-                Debug.Log("other");
+                txt.text = "Score : " + sum + "\n5sec will move";
                 StartCoroutine(ch_time());
                 break;
         }
@@ -83,8 +78,7 @@ public class Quiz : MonoBehaviour
         while(true)
         {
             time -= Time.deltaTime;
-            Debug.Log(time);
-            if (time < 0) // 타이머가 0초로 넘어가면 뉴턴 씬으로 넘어간다
+            if (time < 0)
                 SceneManager.LoadScene("Newtons");
             yield return null;
 

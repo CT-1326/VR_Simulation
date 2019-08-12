@@ -313,17 +313,17 @@ public class OVRPlayerController : MonoBehaviour
 
 			bool dpad_move = false;
 
-			if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger)) // 컨트롤러 트리거만 눌렸을 때
+			if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger)) // when press trigger
 			{
-				moveForward = true; // 카메라 보는 방향으로 전진
+				moveForward = true; // go forward
 			}
 
-			if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && OVRInput.Get(OVRInput.Button.PrimaryTouchpad)) // 트리거 및 터치패드가 눌렸을 때
+			if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && OVRInput.Get(OVRInput.Button.PrimaryTouchpad)) // when press trigger with touchpad
 			{
-				dpad_move = true; // 이동 속도 향상
+				dpad_move = true; // more speed up
 			}
 
-            if(OVRInput.Get(OVRInput.Button.Back)) // 백 버튼이 눌렸을 때
+            if(OVRInput.Get(OVRInput.Button.Back)) // press back button
             {
                 SceneManager.LoadScene("Main");
             }
