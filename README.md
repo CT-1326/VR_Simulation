@@ -2,7 +2,7 @@
     Create VR physics Simulation with unity engine
 
 # Prerequisites
-    Unity 2019.1.19f1
+    Unity 2019.1.9f1
 
     Gear VR with controller
 
