@@ -40,4 +40,4 @@ https://github.com/alecKarfonta/newtonsCannon2
 Thanks for again great help!
 
 # License
-This project is licensed under the MIT License - see the [VR_Physics/LICENSE](https://github.com/BSAA0203/VR_Physics/blob/master/LICENSE)(LICENSE)
+This project is licensed under the MIT License - see the [VR_Physics/LICENSE](LICENSE)
