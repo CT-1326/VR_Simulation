@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
+/*
+ video url : https://www.youtube.com/watch?v=fXZpc1r9jfY
+ video2 url : https://www.youtube.com/watch?v=QuFztGq-C4w
+ video3 url : https://www.youtube.com/watch?v=A0zkd8Mv3ik&t=3s
+*/
+
 public class Video : MonoBehaviour
 {
     public GameObject video; // Movie
