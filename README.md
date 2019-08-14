@@ -22,7 +22,7 @@ https://dashboard.oculus.com/tools/osig-generator
      You need to put your Oculus Signature File in this path IF you don't, make it.
 
 # Screenshots
-| Movie | Simulation |
+| Video | Simulation |
 |:-:|:-:|
 | ![First](https://user-images.githubusercontent.com/33346331/62880568-aa204200-bd68-11e9-8a15-ccb1cc4f6e7c.png) | ![Sec](https://user-images.githubusercontent.com/33346331/62880569-aa204200-bd68-11e9-9914-3773fc46dc9e.png) |
 
