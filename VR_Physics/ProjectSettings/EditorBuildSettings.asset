@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Select.unity
     guid: 042a4acadfac4cf4695effdb0fc8bb05
   - enabled: 1
-    path: Assets/Scenes/Movie.unity
+    path: Assets/Scenes/Video.unity
     guid: 67d27da1a4fdc104fbeef1c4fad3af63
   - enabled: 1
     path: Assets/Scenes/Newtons.unity

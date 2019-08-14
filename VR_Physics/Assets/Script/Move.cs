@@ -23,16 +23,16 @@ public class Move : MonoBehaviour
     public void V1()  // go to frist movie
     {
         check = 1; 
-        SceneManager.LoadScene("Movie");
+        SceneManager.LoadScene("Video");
     }
     public void V2() 
     {
         check = 2;
-        SceneManager.LoadScene("Movie");
+        SceneManager.LoadScene("Video");
     }
     public void V3() 
     {
         check = 3;
-        SceneManager.LoadScene("Movie");
+        SceneManager.LoadScene("Video");
     }
 }
