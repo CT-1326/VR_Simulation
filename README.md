@@ -37,7 +37,7 @@ https://github.com/alecKarfonta/newtonsCannon2
 
     about make for newtons_cannon
 
-Thanks for again great help!
+__Thanks for again great help!__
 
 # License
 This project is licensed under the MIT License - see the [VR_Physics/LICENSE](LICENSE)
