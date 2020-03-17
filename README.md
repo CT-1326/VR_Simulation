@@ -1,5 +1,5 @@
-# VR_Physics
-    Create VR physics Simulation with unity engine
+# VR_Simulation
+    Learning Oculus VR
 
 # Prerequisites
     Unity 2019.1.9f1
@@ -40,4 +40,4 @@ https://github.com/alecKarfonta/newtonsCannon2
 __Thanks for again great help!__
 
 # License
-This project is licensed under the MIT License - see the [VR_Physics/LICENSE](LICENSE)
+This project is licensed under the MIT License - see the [VR_Simulation/LICENSE](LICENSE)
