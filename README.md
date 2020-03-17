@@ -1,5 +1,5 @@
 # VR_Simulation
-    Learning Oculus VR
+    Learning Gear VR
 
 # Prerequisites
     Unity 2019.1.9f1
